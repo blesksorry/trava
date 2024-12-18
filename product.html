@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traveloka</title>
+    <link rel="stylesheet" href="./assets/css/product.css">
+    <script src="./assets/js/product.js" defer></script>
+</head>
+<body>
+    <header class="header">
+		<div class="header__content">
+			<nav class="header__nav">
+				<div class="header__logo">
+					<h2 class="header__logo__text"><a href="./index.html">Traveloka</a></h2>
+				</div>
+
+				<ul class="header__menu">
+					<li class="header___nav__item"><a href="./index.html" class="header__nav__link">Главная</a></li>
+					<li class="header__nav__item"><a href="./form.html" class="header__nav__link">Контакты</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+    <section class="main">
+
+    </section>
+    <section class="contact">
+        <div class="container">
+            <div class="contact__title">
+                <h2>Хотите посмотреть достопримечательности рядом с вами?</h2>
+            </div>
+            <div class="contact__wrapper">
+                <div class="contact__text">
+                    <p>Исследуйте достопримечательности, которые находятся совсем рядом, совершайте новые открытия и путешествуйте по миру!</p>
+                </div>
+                <form class="contact__form form">
+                    <input type="text" class="form__input" placeholder="Ваше имя" autocomplete="off" required>
+                    <input data-tel-input type="text" class="form__input" placeholder="Ваш телефон" autocomplete="off" required>
+                    <p class="form__privat">
+                        *Мы никому не передаем ваши данные. <br>И не сохраняем ваш номер в базу.
+                    </p>
+                    <button type="submit" class="form__btn"><a href="https://maps.app.goo.gl/QrZ25ri4FjGFfEkX7">Посмотреть район</a></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+	<section class="product">
+		<h1 class="product__title">Достопримечательности России</h1>
+			<div class="product__content">
+				<input type="text" id="searchInput" placeholder="Введите название достопримечательности">
+				<!-- <input type="text" id="cityFilter" placeholder="Введите город"> -->
+				<select id="popularityFilter">
+					<option value="all">Все</option>
+					<option value="highest">Наибольшая посещаемость</option>
+					<option value="lowest">Наименьшая посещаемость</option>
+				</select>
+			</div>
+			<div id="attractions"></div>
+			<div class="pagination"></div>
+	</section>
+    <footer class="footer none">
+		<div class="container">
+			<div class="footer__grid">
+				<div class="footer__logo">
+					<a href="#">
+						<h2 class="header__logo__text">Traveloka</h2>
+					</a>
+				</div>
+				<div class="footer__nav">
+					<nav>
+						<ul class="footer__nav-list">
+							<li><a href="#">О комплексе</a></li>
+							<li><a href="#">Район</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__nav">
+					 <nav>
+						<ul class="footer__nav-list">
+							<li><a href="#">Сервисные услуги</a></li>
+							<li><a href="#">Экологическая устойчивость</a></li>
+							<li><a href="#">Инвестиционные возможности</a></li>
+							<li><a href="#">Программа лояльности</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__address">
+					<ul class="footer__nav-list">
+						<li>Адрес: Наб. реки Фонтанки 10-15</li>
+						<li>Телефон: <a href="tel:+78121287967">8 (982) 923-65-07</a></li>
+						<li>E-mail: <a class="link-bold" href="mailto:vip@lofthouse.ru">vip@traveloka.ru</a></li>
+					</ul>
+					<ul class="footer__socials">
+						<li><a href="#"><img src="./assets/img/facebook.svg" alt="img"></a></li>
+						<li><a href="#"><img src="./assets/img/instagram.svg" alt="img"></a></li>
+						<li><a href="#"><img src="./assets/img/twitter.svg" alt="img"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

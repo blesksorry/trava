@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>traveloka</title>
+		<link rel="stylesheet" href="./assets/css/form.css" />
+		
+        <script src="./assets/js/form.js" defer></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__content">
+				<nav class="header__nav">
+					<div class="header__logo">
+						<h2 class="header__logo__text"><a href="./index.html">Traveloka</a></h2>
+					</div>
+
+					<ul class="header__menu">
+						<li class="header___nav__item"><a href="./index.html" class="header__nav__link">Главная</a></li>
+						<li class="header__nav__item"><a href="./form.html" class="header__nav__link">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+			<section class="main">
+				<div class="main__title">
+					<div class="main__title__small">Свяжитесь с нами</div>
+					<h1 class="main__title__big">Traveloka</h1>
+
+					<ul class="main__icons">
+						<li><a href="#"><img src="./assets/img/facebook.svg" alt="img"/></a></li>
+						<li><a href="#"><img src="./assets/img/instagram.svg" alt="img"/></a></li>
+						<li><a href="#"><img src="./assets/img/twitter.svg" alt="img"/></a></li>
+					</ul>
+				</div>
+
+				<div class="main__box">
+					<a href="https://maps.app.goo.gl/QrZ25ri4FjGFfEkX7" class="main__item">
+						<span class="main__item__text" >Наш офис</span>
+
+						<!-- <div id="modal" class="modal">
+							<div class="modal content">
+								<span class="close">&times;</span>
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13807390.988843892!2d123.85076247804102!3d-32.340184298619086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6890053e2d101%3A0x649c6c2e16a3d902!2sOfficeworks%20Hoppers%20Crossing!5e0!3m2!1sru!2sru!4v1733726611246!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div>
+
+						</div> -->
+
+					</a>
+					<a href="#" class="main__item">
+						<span class="main__item__text" id="openModalBtn" >Оставить форму</span>
+						
+						<div id="modal" class="modal">
+							<div class="modal__content">
+								<span class="close">&times;</span>
+								<h2>Оставить форму</h2>
+									<form id="applicationForm">
+										<label for="name">Имя:</label>
+										<input type="text" id="name" name="name" required>
+			
+										<label for="email">Email:</label>
+										<input type="email" id="email" name="email" required>
+			
+										<label for="message">Описание маршрута:</label>
+										<textarea id="message" name="message" required></textarea>
+			
+										<button type="submit">Отправить</button>
+									</form>
+							</div>
+						</div>
+					</a>
+				</section>
+
+				<footer class="footer none1">
+					<div class="container">
+						<div class="footer__grid">
+							<div class="footer__logo">
+								<a href="#">
+									<h2 class="header__logo__text">Traveloka</h2>
+								</a>
+							</div>
+							<div class="footer__nav">
+								<nav>
+									<ul class="footer__nav-list">
+										<li><a href="#">О комплексе</a></li>
+										<li><a href="#">Район</a></li>
+										<li><a href="#">Контакты</a></li>
+									</ul>
+								</nav>
+							</div>
+							<div class="footer__nav">
+								 <nav>
+									<ul class="footer__nav-list">
+										<li><a href="#">Сервисные услуги</a></li>
+										<li><a href="#">Экологическая устойчивость</a></li>
+										<li><a href="#">Инвестиционные возможности</a></li>
+										<li><a href="#">Программа лояльности</a></li>
+									</ul>
+								</nav>
+							</div>
+							<div class="footer__address">
+								<ul class="footer__nav-list">
+									<li>Адрес: Наб. реки Фонтанки 10-15</li>
+									<li>Телефон: <a href="tel:+78121287967">8 (982) 923-65-07</a></li>
+									<li>E-mail: <a class="link-bold" href="mailto:vip@lofthouse.ru">vip@traveloka.ru</a></li>
+								</ul>
+								<ul class="footer__socials">
+									<li><a href="#"><img src="./assets/img/facebook.svg" alt="img"></a></li>
+									<li><a href="#"><img src="./assets/img/instagram.svg" alt="img"></a></li>
+									<li><a href="#"><img src="./assets/img/twitter.svg" alt="img"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</footer>	
+	</body>
+</html>

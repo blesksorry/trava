@@ -1,0 +1,269 @@
+* {
+	padding: 0px;
+	margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+	--index: calc(1vw + 1vh);
+
+	--light-color: #ffffff;
+	--dark-color: #0e0e0e;
+
+    --light-text: rgba(255, 255, 255, 0.7);
+
+    --ligth-button:  rgba(255, 255, 255, 0.1);
+    --hover-button: rgba(255, 255, 255, 0.2);
+
+    --dark-modal: rgba(0, 0, 0, 0.758);
+
+}
+
+@font-face {
+	font-family: arsenal_f;
+	src: url(../fonts/arsenal-regular.woff2);
+}
+
+body {
+	font-family: arsenal_f;
+	background-color: var(--dark-color);
+}
+
+a{
+    text-decoration: none;
+    color: var(--light-color);
+}
+
+li{
+    list-style: none;
+}
+
+.header {
+	position: relative;
+	height: calc(var(--index) * 5);
+	background-color: var(--dark-color);
+	color: var(--light-color);
+
+    &__content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__nav {
+        padding-left: calc(var(--index) * 3);
+        padding-right: calc(var(--index) * 3);
+        padding-top: calc(var(--index) * 2);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        &__link {
+            color: var(--light-color);
+        }
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        font-size: calc(var(--index) * 1);        
+    }
+    &__menu {
+        display: flex;
+        column-gap: calc(var(--index) * 3);
+        font-size: calc(var(--index) * 1);
+    }
+}
+
+.main{
+    margin-top: calc(var(--index)* 4);
+    display: grid;
+    height: 100vh;
+    color: var(--light-color);
+    padding: calc(var(--index) * 4.5);
+
+    &__title {
+        position: relative;
+        text-align: center;
+
+        &__small {
+            position: absolute;
+            top: calc(var(--index) * -1.5);
+            width: 100%;
+            letter-spacing: 0.55em;
+            font-size: calc(var(--index) * 1.5);
+            color: var(--light-text);
+            text-transform: uppercase;
+        }
+
+        &__big {
+            font-size: calc(var(--index) * 7.5);
+            color: var(--light-color);
+        }
+    }
+    &__icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: calc(var(--index) * 2.5);
+    }
+    &__box {
+        display: flex;
+        column-gap: calc(var(--index) * 2.5);
+        justify-content: center;
+    }
+    &__item{
+        margin-top: calc(var(--index)* 4);
+        position: relative;
+        width: calc(var(--index) * 15);
+        height: calc(var(--index) * 6.5);
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-position: calc(var(--index) * 1.5);
+        color: var(--light-color);
+        background-color: var(--ligth-button);
+        transition: background-color 0.2s ease-in;
+        border-radius: calc(var(--index) * .5);
+
+        &__text {
+            opacity: 0.6;
+            font-size: calc(var(--index) * 1.5);
+        }
+    }
+
+    &__item::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--ligth-button);
+        filter: blur(calc(var(--index) * .5));
+        border-radius: (calc(var(--index) * 2));
+        transition: background-color 0.3s ease-in;
+    }
+    
+    &__item:hover::before {
+        background-color: var(--hover-button);
+    }
+}
+
+
+
+
+#openModalBtn {
+    padding: calc(var(--index) * 4);
+    font-size: calc(var(--index) * 1.5);
+    cursor: pointer;
+    color: var(--light-color);
+    border: none;
+    border-radius: calc(var(--index) * 2);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--dark-modal);
+}
+
+.modal__content {
+    background-color: var(--dark-modal);
+    margin: 15% auto;
+    padding: calc(var(--index) * 2);
+    max-width: calc(var(--index) * 20);
+	max-height: calc(var(--index) * 38);
+    border-radius: calc(var(--index) * 2);
+}
+
+.close {
+    color: var(--light-text);
+    float: right;
+    font-size: calc(var(--index) * 1.5);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--dark-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: calc(var(--index) * .8);
+}
+
+input, textarea {
+    padding: calc(var(--index) * .6);
+    margin-top: calc(var(--index) * 1);
+    border: 1px solid var(--light-color);
+    border-radius: calc(var(--index) * .4);
+}
+
+button[type="submit"] {
+    margin-top: calc(var(--index) * 2);
+    padding: calc(var(--index) * 1);
+    background-color: var(--ligth-button);
+    color: var(--light-text);
+    border: none;
+    border-radius: calc(var(--index) * 1);
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--hover-button);
+}
+
+
+.footer {
+    padding-top: calc(var(--index) * 2);
+    padding-bottom: calc(var(--index) * 2);
+    background-color: var(--dark-color);
+    font-size: calc(var(--index) * .7);
+    letter-spacing: 0.05rem;
+    color: var(--light-color);
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: calc(var(--index) * 2);
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        font-size: calc(var(--index) * 1);  
+        margin-left: calc(var(--index) * 3);
+    }
+    &__nav-list {
+        display: grid;
+        gap: calc(var(--index) * 1);
+    }
+    &__address {
+        display: grid;
+        gap: calc(var(--index) * 1);
+    }
+    &__socials {
+        display: flex;
+        align-items: center;
+        column-gap: calc(var(--index) * 1.5);
+    }
+    }
